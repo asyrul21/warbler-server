@@ -4,9 +4,9 @@ mongoose.set("debug", true)
 mongoose.Promise = Promise;
 
 // credentials
-const mongoUsername = 'asyrul21'
-const mongoPW = 'abcd1234'
-const dbName = 'warbler-db'
+const mongoUsername = process.env.mongoUsername || 'asyrul21'
+const mongoPW = process.env.mongoPW || 'abcd1234'
+const dbName = process.env.dbName || 'warbler-db'
 
 mongoose.connect(`mongodb+srv://${mongoUsername}:${mongoPW}@warblercluster.vmhxl.mongodb.net/${dbName}?retryWrites=true&w=majority`, {
     keepAlive: true,
