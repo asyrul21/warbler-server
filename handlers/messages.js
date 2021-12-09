@@ -21,7 +21,7 @@ exports.createMessage = async function (req, res, next) {
       profileImageUrl: true,
     });
 
-    return res.status(200).json(foundUser);
+    return res.status(200).json(foundMessage);
   } catch (error) {
     return next(error);
   }

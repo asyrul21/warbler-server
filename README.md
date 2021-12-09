@@ -12,6 +12,38 @@ npm install express bcrypt body-parser mongoose jsonwebtoken cors dotenv --save
 mkdir mkdir routes models middleware handlers
 ```
 
+## Deployment
+
+1. Make sure .git is removed
+
+```bash
+rm -rf .git
+```
+
+2. Run git init
+
+```bash
+git init
+```
+
+3. _IMPORTANT_ Add _node_modules_ in .gitignore _IMPORTANT_
+
+4. Create heroku app
+
+```bash
+heroku create [name of app]
+```
+
+5. Create Git Repo on Github
+
+6. Add Commit and push to git
+
+```bash
+git add .
+git commit "..."
+git push heroku master
+```
+
 # Issues
 
 1. Bcrypt problem:
